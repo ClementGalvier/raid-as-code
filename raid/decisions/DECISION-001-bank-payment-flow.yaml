@@ -4,7 +4,7 @@ title: Going live with feature 3 included in the app
 type: Decision
 status: open              # open | mitigated | closed | accepted
 severity: high            # low | medium | high | critical
-owner: clement-demo
+owner: clement-demo-restored
 raised_date: 2026-09-15
 target_resolution: 2026-10-02
 linked_decisions: [D-001]
