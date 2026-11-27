@@ -148,7 +148,7 @@ function renderRegister(entries, builtAt) {
               <p class="muted">Track and manage every project consideration.</p>
             </div>
             <div class="register__controls">
-              <label class="visually-hidden" for="search">Search items</label>
+              <label class="visually-hidden" for="search">Search</label>
               <input id="search" class="input" type="search" placeholder="Search items..." autocomplete="off" />
               <label class="visually-hidden" for="status-filter">Filter by status</label>
               <select id="status-filter" class="input select">
