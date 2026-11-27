@@ -1,0 +1,11 @@
+# RISK-001-bank-payment-flow.yaml
+id: R-001
+title: interim payment solution unproven before go/no-go
+type: risk
+status: open              # open | mitigated | closed | accepted
+severity: high            # low | medium | high | critical
+owner: victor-demo
+raised_date: 2026-09-15
+target_resolution: 2026-10-02
+linked_decisions: [D-001]
+notes: Proof-of-life test required — single member, production, no sandbox available

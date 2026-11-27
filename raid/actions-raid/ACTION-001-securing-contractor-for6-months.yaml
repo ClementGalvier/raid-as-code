@@ -1,0 +1,11 @@
+# ACTION-001-securing-contractor-for6-months.yaml
+id: ACTION-001
+title: onboarding Vladimir for 26 weeks on an T&M
+type: ACTION
+status: open              # open | mitigated | closed | accepted
+severity: high            # low | medium | high | critical
+owner: cathy-demo
+raised_date: 2026-09-15
+target_resolution: 2026-10-02
+linked_decisions:
+notes: Vlad only operates 30hrs per week

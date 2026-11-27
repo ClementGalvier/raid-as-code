@@ -1,0 +1,11 @@
+# ISSUE-001-single-mode-of-failure.yaml
+id: ISSUE-001
+title: Single mode of failure on 1 Dev
+type: Issue
+status: open              # open | mitigated | closed | accepted
+severity: high            # low | medium | high | critical
+owner: Walter-demo
+raised_date: 2026-09-15
+target_resolution: 2026-10-02
+linked_decisions: null
+notes: 1 developer is at the core of all streams and his failure means the project comes to a complete halt. we need a secondment before xmas

@@ -1,0 +1,11 @@
+# DECISION-001-bank-payment-flow.yaml
+id: DECISION-001
+title: Going live with feature 3 included in the app
+type: Decision
+status: open              # open | mitigated | closed | accepted
+severity: high            # low | medium | high | critical
+owner: clement-demo
+raised_date: 2026-09-15
+target_resolution: 2026-10-02
+linked_decisions: [D-001]
+notes: this feature is not fully UAT'd and we are 3 days past code freeze
