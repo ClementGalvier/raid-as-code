@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "validate": "node validate.js"
+    "validate": "node validate.js",
+    "build": "node validate.js && node site/build.js"
   },
   "dependencies": {
     "js-yaml": "^5.5.0",

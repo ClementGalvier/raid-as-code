@@ -1,0 +1,136 @@
+/* RAID Dashboard — matches the Figma "RAID Dashboard" frame. */
+
+:root {
+  --page-bg: #ffffff;
+  --text: #000000;
+  --muted: #6b6b6b;
+  --row-bg: #f2e8e8;
+
+  --green: #059b50;
+  --red: #c11111;
+  --amber: #c26a08;
+  --grey: #8a8a8a;
+
+  --row-height: 48px;
+  --row-gap: 40px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 72px 4% 96px;
+}
+
+/* Title sits indented, roughly in line with the Title column. */
+.page__header {
+  padding-left: 11%;
+  margin-bottom: 96px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 46px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.page__meta {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.group + .group { margin-top: 72px; }
+
+.group__title {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.group__count {
+  margin-left: 6px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* Each entry is a separate pale band with a gap between bands. */
+.raid-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* Header cells only carry screen-reader text; they take no visible space. */
+.raid-table th { padding: 0; height: 0; border: 0; }
+
+.row td {
+  height: var(--row-height);
+  background: var(--row-bg);
+  padding: 0 12px;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.row + .row td { border-top: var(--row-gap) solid var(--page-bg); }
+
+/* Column positions from the design: Title ~15%, Owner ~69%, ID ~91%. */
+.c-status { width: 15%; }
+.c-title  { width: 54%; }
+.c-owner  { width: 22%; }
+.c-id     { width: 9%; }
+.row td.col-status { padding-left: 5px; }
+
+.row--empty td { color: var(--muted); padding-left: 16px; }
+
+.badge {
+  display: inline-block;
+  min-width: 88px;
+  padding: 5px 16px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.badge--green { background: var(--green); }
+.badge--red   { background: var(--red); }
+.badge--amber { background: var(--amber); }
+.badge--grey  { background: var(--grey); }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Phones: stack each entry into a card instead of four columns. */
+@media (max-width: 640px) {
+  :root { --row-gap: 16px; }
+  .page { padding: 40px 16px 64px; }
+  .page__header { padding-left: 0; margin-bottom: 48px; }
+  h1 { font-size: 32px; }
+
+  .raid-table, .raid-table tbody, .row, .row td { display: block; width: 100%; }
+  .raid-table colgroup, .raid-table thead { display: none; }
+  .row { background: var(--row-bg); padding: 12px; margin-bottom: var(--row-gap); }
+  .row td, .row + .row td, .row td.col-status { height: auto; padding: 2px 0; border: 0; background: none; }
+  .col-title { margin-top: 8px; font-weight: 500; }
+  .col-owner, .col-id { color: var(--muted); }
+}
