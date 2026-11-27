@@ -1,0 +1,11 @@
+# DECISION-002-postponing-go-live-to-q2.yaml
+id: DECISION-002
+title: Going livein Q2
+type: Decision
+status: open              # open | mitigated | closed | accepted
+severity: high            # low | medium | high | critical
+owner: clement-demo-git-insert
+raised_date: 2026-09-15
+target_resolution: 2026-10-02
+linked_decisions: 
+notes: we are late for q1
