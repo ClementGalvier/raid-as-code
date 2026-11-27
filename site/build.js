@@ -149,7 +149,7 @@ function renderRegister(entries, builtAt) {
             </div>
             <div class="register__controls">
               <label class="visually-hidden" for="search">Search</label>
-              <input id="search" class="input" type="search" placeholder="Search items..." autocomplete="off" />
+              <input id="search" class="input" type="search" placeholder="Search items" autocomplete="off" />
               <label class="visually-hidden" for="status-filter">Filter by status</label>
               <select id="status-filter" class="input select">
                 <option value="">Filter by status</option>${statuses
